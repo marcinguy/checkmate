@@ -20,7 +20,8 @@ plugins = {
            'jshint' : 'checkmate.contrib.plugins.javascript.jshint',
            'metrics' : 'checkmate.contrib.plugins.python.metrics',
            'git' : 'checkmate.contrib.plugins.git',
-           'bandit' : 'checkmate.contrib.plugins.python.bandit'
+           'bandit' : 'checkmate.contrib.plugins.python.bandit',
+           'brakeman' : 'checkmate.contrib.plugins.ruby.brakeman'
            }
 
 language_patterns = { 'python':
