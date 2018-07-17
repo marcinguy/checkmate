@@ -19,7 +19,8 @@ plugins = {
            'pyflakes' : 'checkmate.contrib.plugins.python.pyflakes',
            'jshint' : 'checkmate.contrib.plugins.javascript.jshint',
            'metrics' : 'checkmate.contrib.plugins.python.metrics',
-           'git' : 'checkmate.contrib.plugins.git'
+           'git' : 'checkmate.contrib.plugins.git',
+           'bandit' : 'checkmate.contrib.plugins.python.bandit'
            }
 
 language_patterns = { 'python':
