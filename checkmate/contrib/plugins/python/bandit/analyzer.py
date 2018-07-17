@@ -56,7 +56,8 @@ class BanditAnalyzer(BaseAnalyzer):
 
 
                 issues.append({
-                    'code' : issue['code'],
+                    'code' : issue['test_id'],
+                    'location' : location,
                     'data' : issue['issue_text'],
                     'fingerprint' : self.get_fingerprint_from_code(file_revision,location, extra_data=issue['issue_text'])
                     })

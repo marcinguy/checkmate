@@ -6,13 +6,13 @@ issues_data = {
     "severity": "1",
     "description": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
     "categories": [],
-    "title": "assert_used"
+    "title": "assert used"
   },
   "B104": {
     "severity": "2",
     "description": "Possible binding to all interfaces.",
     "categories": [],
-    "title": "hardcoded_bind_all_interfaces"
+    "title": "hardcoded bind all interfaces"
   },
   "B305": {
     "severity": "2",
@@ -48,17 +48,17 @@ issues_data = {
     "severity": "2",
     "description": "Use of extra potential SQL attack vector.",
     "categories": [],
-    "title": "django_extra_used"
+    "title": "django extra used"
   },
   "B611": {
     "severity": "2",
     "description": "Use of RawSQL potential SQL attack vector.",
     "categories": [],
-    "title": "django_rawsql_used"
+    "title": "django rawsql used"
   },
   "B307": {
     "severity": "2",
-    "description": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+    "description": "Use of possibly insecure function - consider using safer ast.literal eval.",
     "categories": [],
     "title": "blacklist"
   },
@@ -66,13 +66,13 @@ issues_data = {
     "severity": "2",
     "description": "Use of exec detected.",
     "categories": [],
-    "title": "exec_used"
+    "title": "exec used"
   },
   "B201": {
     "severity": "3",
     "description": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
     "categories": [],
-    "title": "flask_debug_true"
+    "title": "flask debug true"
   },
   "B402": {
     "severity": "3",
@@ -90,31 +90,31 @@ issues_data = {
     "severity": "1",
     "description": "Possible hardcoded password: 'blerg'",
     "categories": [],
-    "title": "hardcoded_password_default"
+    "title": "hardcoded password default"
   },
   "B105": {
     "severity": "1",
     "description": "Possible hardcoded password: 'blerg'",
     "categories": [],
-    "title": "hardcoded_password_string"
+    "title": "hardcoded password string"
   },
   "B106": {
     "severity": "1",
     "description": "Possible hardcoded password: 'blerg'",
     "categories": [],
-    "title": "hardcoded_password_funcarg"
+    "title": "hardcoded password funcarg"
   },
   "B108": {
     "severity": "2",
     "description": "Probable insecure usage of temp file/directory.",
     "categories": [],
-    "title": "hardcoded_tmp_directory"
+    "title": "hardcoded tmp directory"
   },
   "B324": {
     "severity": "2",
     "description": "Use of insecure MD4 or MD5 hash function.",
     "categories": [],
-    "title": "hashlib_new"
+    "title": "hashlib new"
   },
   "B309": {
     "severity": "2",
@@ -144,7 +144,7 @@ issues_data = {
     "severity": "1",
     "description": "subprocess call with shell=True seems safe, but may be changed in the future, consider rewriting without shell",
     "categories": [],
-    "title": "subprocess_popen_with_shell_equals_true"
+    "title": "subprocess popen with shell equals true"
   },
   "B301": {
     "severity": "2",
@@ -154,33 +154,33 @@ issues_data = {
   },
   "B322": {
     "severity": "3",
-    "description": "The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.",
+    "description": "The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw input instead, input is safe in Python 3.",
     "categories": [],
     "title": "blacklist"
   },
   "B701": {
     "severity": "3",
-    "description": "Using jinja2 templates with autoescape=False is dangerous and can lead to XSS. Ensure autoescape=True or use the select_autoescape function to mitigate XSS vulnerabilities.",
+    "description": "Using jinja2 templates with autoescape=False is dangerous and can lead to XSS. Ensure autoescape=True or use the select autoescape function to mitigate XSS vulnerabilities.",
     "categories": [],
-    "title": "jinja2_autoescape_false"
+    "title": "jinja2 autoescape false"
   },
   "B702": {
     "severity": "2",
     "description": "Mako templates allow HTML/JS rendering by default and are inherently open to XSS attacks. Ensure variables in all templates are properly sanitized via the 'n', 'h' or 'x' flags (depending on context). For example, to HTML escape the variable 'data' do ${ data |h }.",
     "categories": [],
-    "title": "use_of_mako_templates"
+    "title": "use of mako templates"
   },
   "B308": {
     "severity": "2",
-    "description": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.",
+    "description": "Use of mark safe() may expose cross-site scripting vulnerabilities and should be reviewed.",
     "categories": [],
     "title": "blacklist"
   },
   "B703": {
     "severity": "2",
-    "description": "Potential XSS on mark_safe function.",
+    "description": "Potential XSS on mark safe function.",
     "categories": [],
-    "title": "django_mark_safe"
+    "title": "django mark safe"
   },
   "B302": {
     "severity": "2",
@@ -196,51 +196,51 @@ issues_data = {
   },
   "B506": {
     "severity": "2",
-    "description": "Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load().",
+    "description": "Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe load().",
     "categories": [],
-    "title": "yaml_load"
+    "title": "yaml load"
   },
   "B317": {
     "severity": "2",
-    "description": "Using xml.sax.make_parser to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.sax.make_parser with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+    "description": "Using xml.sax.make parser to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.sax.make parser with its defusedxml equivalent function or make sure defusedxml.defuse stdlib() is called",
     "categories": [],
     "title": "blacklist"
   },
   "B103": {
     "severity": "3",
-    "description": "Chmod setting a permissive mask 0777 on file (key_file).",
+    "description": "Chmod setting a permissive mask 0777 on file (key file).",
     "categories": [],
-    "title": "set_bad_file_permissions"
+    "title": "set bad file permissions"
   },
   "B606": {
     "severity": "1",
     "description": "Starting a process without a shell.",
     "categories": [],
-    "title": "start_process_with_no_shell"
+    "title": "start process with no shell"
   },
   "B605": {
     "severity": "1",
     "description": "Starting a process with a shell: Seems safe, but may be changed in the future, consider rewriting without shell",
     "categories": [],
-    "title": "start_process_with_a_shell"
+    "title": "start process with a shell"
   },
   "B601": {
     "severity": "2",
     "description": "Possible shell injection via Paramiko call, check inputs are properly sanitized.",
     "categories": [],
-    "title": "paramiko_calls"
+    "title": "paramiko calls"
   },
   "B603": {
     "severity": "1",
     "description": "subprocess call - check for execution of untrusted input.",
     "categories": [],
-    "title": "subprocess_without_shell_equals_true"
+    "title": "subprocess without shell equals true"
   },
   "B607": {
     "severity": "1",
     "description": "Starting a process with a partial executable path",
     "categories": [],
-    "title": "start_process_with_partial_path"
+    "title": "start process with partial path"
   },
   "B311": {
     "severity": "1",
@@ -252,37 +252,37 @@ issues_data = {
     "severity": "3",
     "description": "Requests call with verify=False disabling SSL certificate checks, security issue.",
     "categories": [],
-    "title": "request_with_no_cert_validation"
+    "title": "request with no cert validation"
   },
   "B608": {
     "severity": "2",
     "description": "Possible SQL injection vector through string-based query construction.",
     "categories": [],
-    "title": "hardcoded_sql_expressions"
+    "title": "hardcoded sql expressions"
   },
   "B502": {
     "severity": "2",
     "description": "Function call with insecure SSL/TLS protocol identified, possible security issue.",
     "categories": [],
-    "title": "ssl_with_bad_version"
+    "title": "ssl with bad version"
   },
   "B504": {
     "severity": "1",
-    "description": "ssl.wrap_socket call with no SSL/TLS protocol version specified, the default SSLv23 could be insecure, possible security issue.",
+    "description": "ssl.wrap socket call with no SSL/TLS protocol version specified, the default SSLv23 could be insecure, possible security issue.",
     "categories": [],
-    "title": "ssl_with_no_version"
+    "title": "ssl with no version"
   },
   "B503": {
     "severity": "2",
     "description": "Function definition identified with insecure SSL/TLS protocol version by default, possible security issue.",
     "categories": [],
-    "title": "ssl_with_bad_defaults"
+    "title": "ssl with bad defaults"
   },
   "B604": {
     "severity": "2",
     "description": "Function call with shell=True parameter identified, possible security issue.",
     "categories": [],
-    "title": "any_other_function_with_shell_equals_true"
+    "title": "any other function with shell equals true"
   },
   "B401": {
     "severity": "3",
@@ -306,17 +306,17 @@ issues_data = {
     "severity": "1",
     "description": "Try, Except, Continue detected.",
     "categories": [],
-    "title": "try_except_continue"
+    "title": "try except continue"
   },
   "B110": {
     "severity": "1",
     "description": "Try, Except, Pass detected.",
     "categories": [],
-    "title": "try_except_pass"
+    "title": "try except pass"
   },
   "B323": {
     "severity": "2",
-    "description": "By default, Python will create a secure, verified ssl context for use in such classes as HTTPSConnection. However, it still allows using an insecure context via the _create_unverified_context that reverts to the previous behavior that does not validate certificates or perform hostname checks.",
+    "description": "By default, Python will create a secure, verified ssl context for use in such classes as HTTPSConnection. However, it still allows using an insecure context via the  create unverified context that reverts to the previous behavior that does not validate certificates or perform hostname checks.",
     "categories": [],
     "title": "blacklist"
   },
@@ -330,53 +330,53 @@ issues_data = {
     "severity": "3",
     "description": "RSA key sizes below 1024 bits are considered breakable. ",
     "categories": [],
-    "title": "weak_cryptographic_key"
+    "title": "weak cryptographic key"
   },
   "B609": {
     "severity": "3",
     "description": "Possible wildcard injection in call: subprocess.Popen",
     "categories": [],
-    "title": "linux_commands_wildcard_injection"
+    "title": "linux commands wildcard injection"
   },
   "B405": {
     "severity": "1",
-    "description": "Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+    "description": "Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse stdlib() is called.",
     "categories": [],
     "title": "blacklist"
   },
   "B313": {
     "severity": "2",
-    "description": "Using xml.etree.cElementTree.XMLParser to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.cElementTree.XMLParser with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+    "description": "Using xml.etree.cElementTree.XMLParser to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.cElementTree.XMLParser with its defusedxml equivalent function or make sure defusedxml.defuse stdlib() is called",
     "categories": [],
     "title": "blacklist"
   },
   "B314": {
     "severity": "2",
-    "description": "Using xml.etree.ElementTree.XMLParser to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.XMLParser with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+    "description": "Using xml.etree.ElementTree.XMLParser to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.XMLParser with its defusedxml equivalent function or make sure defusedxml.defuse stdlib() is called",
     "categories": [],
     "title": "blacklist"
   },
   "B407": {
     "severity": "1",
-    "description": "Using xml.dom.expatbuilder to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.dom.expatbuilder with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+    "description": "Using xml.dom.expatbuilder to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.dom.expatbuilder with the equivalent defusedxml package, or make sure defusedxml.defuse stdlib() is called.",
     "categories": [],
     "title": "blacklist"
   },
   "B316": {
     "severity": "2",
-    "description": "Using xml.dom.expatbuilder.parseString to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.dom.expatbuilder.parseString with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+    "description": "Using xml.dom.expatbuilder.parseString to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.dom.expatbuilder.parseString with its defusedxml equivalent function or make sure defusedxml.defuse stdlib() is called",
     "categories": [],
     "title": "blacklist"
   },
   "B406": {
     "severity": "1",
-    "description": "Using sax to parse untrusted XML data is known to be vulnerable to XML attacks. Replace sax with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+    "description": "Using sax to parse untrusted XML data is known to be vulnerable to XML attacks. Replace sax with the equivalent defusedxml package, or make sure defusedxml.defuse stdlib() is called.",
     "categories": [],
     "title": "blacklist"
   },
   "B315": {
     "severity": "2",
-    "description": "Using xml.sax.expatreader.create_parser to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.sax.expatreader.create_parser with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+    "description": "Using xml.sax.expatreader.create parser to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.sax.expatreader.create parser with its defusedxml equivalent function or make sure defusedxml.defuse stdlib() is called",
     "categories": [],
     "title": "blacklist"
   },
@@ -394,31 +394,31 @@ issues_data = {
   },
   "B408": {
     "severity": "1",
-    "description": "Using parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace parse with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+    "description": "Using parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace parse with the equivalent defusedxml package, or make sure defusedxml.defuse stdlib() is called.",
     "categories": [],
     "title": "blacklist"
   },
   "B318": {
     "severity": "2",
-    "description": "Using xml.dom.minidom.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.dom.minidom.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+    "description": "Using xml.dom.minidom.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.dom.minidom.parse with its defusedxml equivalent function or make sure defusedxml.defuse stdlib() is called",
     "categories": [],
     "title": "blacklist"
   },
   "B409": {
     "severity": "1",
-    "description": "Using parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace parse with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+    "description": "Using parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace parse with the equivalent defusedxml package, or make sure defusedxml.defuse stdlib() is called.",
     "categories": [],
     "title": "blacklist"
   },
   "B319": {
     "severity": "2",
-    "description": "Using xml.dom.pulldom.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.dom.pulldom.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+    "description": "Using xml.dom.pulldom.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.dom.pulldom.parse with its defusedxml equivalent function or make sure defusedxml.defuse stdlib() is called",
     "categories": [],
     "title": "blacklist"
   },
   "B411": {
     "severity": "3",
-    "description": "Using xmlrpclib to parse untrusted XML data is known to be vulnerable to XML attacks. Use defused.xmlrpc.monkey_patch() function to monkey-patch xmlrpclib and mitigate XML vulnerabilities.",
+    "description": "Using xmlrpclib to parse untrusted XML data is known to be vulnerable to XML attacks. Use defused.xmlrpc.monkey patch() function to monkey-patch xmlrpclib and mitigate XML vulnerabilities.",
     "categories": [],
     "title": "blacklist"
   }
