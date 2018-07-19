@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 
 issues_data = {
-{
   "BasicAuth": {
     "title": "BasicAuth",
     "description": "%(issue.data)s",

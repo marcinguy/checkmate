@@ -40,6 +40,7 @@ class BrakemanAnalyzer(BaseAnalyzer):
         f = open(tmpdir+"/"+file_revision.path,"w")
         
         fout = tempfile.NamedTemporaryFile(suffix=".json", delete = False)
+        result = {}
         try:
             with f:
                 f.write(file_revision.get_file_content())
@@ -62,7 +63,11 @@ class BrakemanAnalyzer(BaseAnalyzer):
 
 
             with open(fout.name, "r") as f:
-              result = json.load(f)
+              try:
+                 result = json.load(f)
+              except ValueError as e:
+                 result['warnings']=[]
+                 pass
             json_result = result
             
             for issue in json_result['warnings']:
